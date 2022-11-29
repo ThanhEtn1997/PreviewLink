@@ -2,26 +2,28 @@
 <html>
 
 <head>
-    <title>Cart - Servier Partner Stores</title>
-    <meta property="og:title" content="136.000đ/unit   Quantity x5     TOTAL: 3.560,000đ">
-    <meta property="og:description" content="You have received a cart from Binh Phu Pharma!!! Click to edit and apply voucher.">
-    <meta property="og:image" content="https://produploads.blob.core.windows.net/uploads/20221121072851534.jpg">
+    <title>{name}</title>
+    <meta property="og:title" content="{basePrice}/unit   Quantity x{quantity}     TOTAL: {total}">
+    <meta property="og:description" content="{content}">
+    <meta property="og:image" content="{image}">
     <meta property="og:type" content="product">
     <meta property="og:locale" content="vi_VN">
 </head>
 
 <body>
 
-    <h1>Test preview link</h1>
-
-    <p>My first paragraph.</p>
+    <h1>Test preview link - <b class="text-color">{name}</b></h1>
 
 </body>
 
 </html>
 
 <script>
-    $(document).ready(() => {
 
-    });
 </script>
+
+<style>
+    .text-color {
+        color: rgb(0, 60, 138);
+    }
+</style>
