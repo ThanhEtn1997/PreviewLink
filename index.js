@@ -26,25 +26,11 @@ app.get('/store/:id', (req, res) => {
   html_template_string = html_template_string.replaceAll(/{name}/g, store.name);
   html_template_string = html_template_string.replace(/{basePrice}/g, store.basePrice);
   html_template_string = html_template_string.replace(/{quantity}/g, store.quantity);
-  html_template_string = html_template_string.replace(/{content}/g, store.content);
+  html_template_string = html_template_string.replace(/{total}/g, store.total);
+  html_template_string = html_template_string.replace(/{description}/g, store.description);
   html_template_string = html_template_string.replace(/{image}/g, store.image);
 
-  // fs.readFile(someFile, 'utf8', function (err, data) {
-  //   if (err) {
-  //     return console.log(err);
-  //   }
-  //   data = data.replace(/string to be replaced/g, 'replacement');
-  
-  //   fs.writeFile(someFile, result, 'utf8', function (err) {
-  //      if (err) return console.log(err);
-  //   });
-  // });
-
     res.send(html_template_string);
-
-    //res.sendFile(html_template);
-
-    //res.sendFile(__dirname + '/media/html/index.html');
 })
 
 app.get('/index', (req, res) => {
